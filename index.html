@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ff6a1a" />
+  <title>Foodie Flare: Flavor Empire</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main id="game">
+    <img id="worldBg" src="assets/images/world-bg.svg" alt="" />
+
+    <section id="topHud">
+      <div id="profileCard">
+        <img id="avatar" src="assets/images/mascot-flare.svg" alt="Flare mascot" />
+        <div id="brandInfo">
+          <div class="levelRow">
+            <span id="levelLabel">Level 1</span>
+            <span id="eraName">Backyard Stand</span>
+          </div>
+          <div class="bar"><div id="eraBar"></div></div>
+          <div class="tinyStats">
+            <span>Fans <b id="fansText">0</b></span>
+            <span>Workers <b id="workersText">0</b></span>
+          </div>
+        </div>
+      </div>
+      <div id="powerBadge">🔥 <span id="powerText">0</span></div>
+    </section>
+
+    <button id="dailyBtn" class="roundAlert" type="button">!</button>
+
+    <section id="tapLayer">
+      <button class="tapItem itemOne" type="button" data-flavor="dust">🌶️</button>
+      <button class="tapItem itemTwo" type="button" data-flavor="salt">🧂</button>
+      <button class="tapItem itemThree" type="button" data-flavor="honey">🍯</button>
+      <button class="tapItem itemFour" type="button" data-flavor="spark">✨</button>
+    </section>
+
+    <section id="standArea">
+      <img id="standImg" src="assets/images/stand.svg" alt="Foodie Flare stand" />
+      <img id="jarsImg" src="assets/images/flavor-jars.svg" alt="Flavor jars" />
+      <img id="heroSprite" class="sprite" src="assets/images/agent-hero.svg" alt="Agent Hero" />
+      <img id="pickySprite" class="sprite" src="assets/images/picky.svg" alt="Picky" />
+    </section>
+
+    <section id="missionCard">
+      <div class="missionHead">Current Goal</div>
+      <div id="missionText">Collect 100 Flavor Dust.</div>
+      <div id="missionReward">Reward: 50 fans</div>
+    </section>
+
+    <section id="resourceDock">
+      <div class="resource"><img src="assets/images/dust-icon.svg" alt="" /><span id="dustText">0</span></div>
+      <div class="resource"><img src="assets/images/fan-icon.svg" alt="" /><span id="gemsText">0</span></div>
+      <div class="resource"><img src="assets/images/zone-icon.svg" alt="" /><span id="zonesText">1</span></div>
+    </section>
+
+    <div id="toast"></div>
+
+    <section id="chatBar"><b>World</b><span id="chatText">Picky: plain chips are a personal attack.</span></section>
+
+    <nav id="bottomNav" aria-label="Game menu">
+      <button type="button" data-panel="standPanel"><span>🏕️</span>Stand<i>!</i></button>
+      <button type="button" data-panel="recipePanel"><span>🔬</span>Recipes<i>!</i></button>
+      <button type="button" data-panel="mascotPanel"><span>🐾</span>Mascots</button>
+      <button type="button" data-panel="ordersPanel"><span>📦</span>Orders</button>
+      <button type="button" data-panel="zonesPanel"><span>🗺️</span>Zones</button>
+    </nav>
+
+    <section id="standPanel" class="panel">
+      <header><h2>Snack Stand</h2><button type="button" class="closePanel">×</button></header>
+      <div id="standList"></div>
+    </section>
+
+    <section id="recipePanel" class="panel">
+      <header><h2>Recipes</h2><button type="button" class="closePanel">×</button></header>
+      <div id="recipeList"></div>
+    </section>
+
+    <section id="mascotPanel" class="panel">
+      <header><h2>Mascots</h2><button type="button" class="closePanel">×</button></header>
+      <div id="mascotList"></div>
+    </section>
+
+    <section id="ordersPanel" class="panel">
+      <header><h2>Orders</h2><button type="button" class="closePanel">×</button></header>
+      <div id="ordersList"></div>
+    </section>
+
+    <section id="zonesPanel" class="panel">
+      <header><h2>Zones</h2><button type="button" class="closePanel">×</button></header>
+      <div id="zonesList"></div>
+    </section>
+
+    <section id="dailyPanel" class="panel">
+      <header><h2>Daily Bonus</h2><button type="button" class="closePanel">×</button></header>
+      <div class="card centerCard">
+        <img class="bigMascot" src="assets/images/mascot-flare.svg" alt="Flare mascot" />
+        <h3>Flare found a bag of samples.</h3>
+        <p>Claim a quick boost to keep the snack empire moving.</p>
+        <button id="claimDaily" type="button" class="buyBtn">Claim Bonus</button>
+      </div>
+    </section>
+
+    <section id="settingsPanel" class="panel">
+      <header><h2>Settings</h2><button type="button" class="closePanel">×</button></header>
+      <div class="card">
+        <h3>Save Data</h3>
+        <p>This game autosaves on this device using browser storage.</p>
+        <button id="hardReset" type="button" class="dangerBtn">Reset Game</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
